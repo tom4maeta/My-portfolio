@@ -1,0 +1,250 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: #c8ebdfcb;
+    color: #333;
+}
+.skillo{
+    background-color: rgb(8, 176, 228);
+    
+
+}
+.skillo:hover{
+    background-color: yellow;
+    cursor:pointer;
+    transform: rotate(-2deg) scale(1.1);
+    transition: background 0.3s ease;
+    
+}
+.skillo,ul{
+    font-weight: 700;
+    list-style: none;
+}
+
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background 0.3s ease;
+}
+
+header.scrolled {
+    background: #222;
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #00aaff;
+}
+
+.burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px;
+}
+.photo,img{
+    text-align: center;
+    width:100%;
+    height: 100%;
+    
+}
+
+@media(max-width: 768px) {
+    .photo,img{
+        text-align: center;
+        width:100%;
+        height:300px;
+        
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+    }
+
+    .burger {
+        display: flex;
+    }
+
+    .nav-links.active {
+        display: flex;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+    }
+    
+    .social-icons img {
+        width: 10px;
+        height: 20px;
+        margin: 0 10px;
+        transition: transform 0.3s;
+    }
+    
+}
+
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+
+#projects, #testimonials {
+    background: #fff;
+    padding: 60px 20px;
+}
+
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+.projects-grid:hover{
+    background-color: to;
+
+}
+.project-card {
+    background: #00aaff;
+    padding: 20px;
+    border-radius: 8px;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.00);
+    background-color:  orangered;
+    transform: rotate(-15deg) scale(1.1);
+    transition: 1s;
+    color:linear-gradient(90deg, #f53707, #81f515);
+}
+
+
+#testimonials {
+    background-color: #f4f4f4;
+}
+
+.testimonial-card {
+    background: #fff;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#contact-form input, #contact-form textarea {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#contact-form button {
+    padding: 10px;
+    background: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+#contact-form button:hover {
+    background: #f50505;
+}
+
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.social-icons img {
+    width: 24px;
+    margin: 0 10px;
+    transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+}
+.button1 {
+    padding: 15px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    background: linear-gradient(135deg, #4CAF50, #2E8B57); /* Green Gradient */
+    border: none;
+    border-radius: 50px; /* Fully rounded button */
+    box-shadow: 0 12px 20px rgba(46, 139, 87, 0.2); /* Soft shadow for depth */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase; /* Text in uppercase for modern look */
+    letter-spacing: 1px; /* Space between letters for better readability */
+  }
+
+  
+  .button1:hover {
+    background: linear-gradient(135deg, #2E8B57, #1c6f3a); /* Darker gradient on hover */
+    box-shadow: 0 15px 25px rgba(46, 139, 87, 0.3); /* Deeper shadow for hover */
+    transform: translateY(-4px); /* Slight lift on hover */
+  }
+
+  
+  .button1:active {
+    transform: translateY(2px); /* Button presses down slightly */
+    box-shadow: 0 8px 15px rgba(46, 139, 87, 0.2); /* Lighter shadow when clicked */
+  }
